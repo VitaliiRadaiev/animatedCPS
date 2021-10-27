@@ -1,0 +1,47 @@
+.side-panel {
+    position: fixed;
+    top: max(136px, 28vh);
+    left: 20px;
+    display: none;
+    flex-direction: column;
+    z-index: 47;
+
+    @media (min-width: 992px) {
+        display: flex;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $mainColor2;
+        color: #fff;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 1.2em;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: $mainColor;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 38px;
+        }
+
+        & img {
+            margin-bottom: 3px;
+            max-height: 34px;
+            max-width: 34px;
+        }
+    }
+}

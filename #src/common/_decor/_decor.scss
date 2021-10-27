@@ -1,0 +1,49 @@
+._decor {
+	position: relative;
+
+    &.right {
+        & ._decor__wrap {
+            left: auto;
+            right: 0;
+            transform: translateX(650px);
+        }
+
+        & ._decor__img-1 {
+            right: auto;
+            left: 0;
+        }
+
+        & ._decor__img-2 {
+            left: auto;
+            right: 0;
+        }
+    }
+
+	&__wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 840px;
+		height: 900px;
+		transform: translateX(-650px);
+
+		@media (max-width: $md1+px) {
+			display: none;
+		}
+	}
+
+	&__img-1 {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+	}
+
+	&__img-2 {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+	}
+}

@@ -1,0 +1,133 @@
+.partners {
+    margin-bottom: 97px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 66px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__slider {
+        padding-left: 80px;
+        padding-right: 80px;
+        position: relative;
+
+        @media (max-width: $md1+px) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @media (max-width: $md4+px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        & .swiper-slide {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+    
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        & .swiper-wrapper {
+            margin-bottom: 43px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 28px;
+            }
+        }
+    }
+
+    &__logo {
+
+    }
+
+    &__slider-btn {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: $mainColor;
+        transition: all .3s ease;
+        position: absolute;
+        top:  calc(50% - 21.5px);
+        transform: translateY(-50%);
+        font-size: 26px;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(34, 60, 66, 0.07);
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            top:  calc(50% - 16px);
+        }
+
+        @media (max-width: 375.98px) {
+            display: none;
+        }
+    }
+
+    &__slider-btn-prev {
+        left: 20px;
+
+        @media (max-width: $md1+px) {
+            left: 10px;
+        }
+        @media (max-width: $md4+px) {
+            left: -32px;
+        }
+    }
+
+    &__slider-btn-next {
+        right: 20px;
+
+        @media (max-width: $md1+px) {
+            right: 10px;
+        }
+        @media (max-width: $md4+px) {
+            right: -32px;
+        }
+    }
+}
+
+.pagination-style {
+    & .swiper-pagination  {
+        position: static;
+    }
+
+    & .swiper-pagination-bullet  {
+        opacity: 1;
+        background: #C4C4C4;
+        height: 19px;
+        width: 19px;
+        margin: 0 7.5px !important;
+
+        @media (max-width: $md3+px) {
+            height: 10px;
+            width: 10px;
+            margin: 0 4px !important;
+        }
+
+        &.swiper-pagination-bullet-active {
+            background: $mainColor;
+        }
+    }
+}
