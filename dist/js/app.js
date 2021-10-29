@@ -251,6 +251,12 @@ if (anchors.length) {
 function randomInteger(min, max) {
 	let rand = min + Math.random() * (max + 1 - min);
 	return Math.floor(rand);
+}
+
+function trimString(el, stringLength = 0) {
+	let str = el.innerText;
+	if(str.length <= stringLength) return;
+	el.innerText = [...str].slice(0, stringLength).join('') + '...';
 };
 	// //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 // let forms = document.querySelectorAll('form');
@@ -1073,6 +1079,50 @@ if ($cookieEl) {
     }
 
 };
+	{
+    let valueCardAllText = document.querySelectorAll('.values-card__text');
+    if(valueCardAllText.length) {
+        setSameHeight(valueCardAllText);
+    }
+
+    let couterItems = document.querySelectorAll('.values-card__num');
+    if (couterItems) {
+        couterItems.forEach(item => {
+            let animation = anime({
+                targets: item,
+                textContent: [0, +item.innerText || 0],
+                round: 1,
+                easing: 'linear',
+                autoplay: false,
+                duration: 1000
+            });
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.intersectionRatio >= 0.7) {
+                            animation.play();
+                            observer.disconnect();
+                        }
+                    });
+                },
+                {
+                    threshold: 0.7
+                }
+            );
+
+            observer.observe(item);
+        })
+    }
+};
+
+
+
+	let quoteTextAll = document.querySelectorAll('.team-photo__quote-text');
+	if(quoteTextAll) {
+		quoteTextAll.forEach(quoteText => {
+			trimString(quoteText, 121);
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function () {

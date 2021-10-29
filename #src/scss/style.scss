@@ -207,6 +207,24 @@ textarea {
 }
 
 .title-1 {
+	font-weight: bold;
+	font-size: 96px;
+	line-height: 1.218em;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 62px;
+	}
+
+	@media (max-width: 575.98px) {
+		font-size: 54px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 48px;
+	}
+	
 }
 .title-2 {
 	font-weight: bold;
@@ -378,9 +396,9 @@ button.btn-default {
 	& a {
 		color: $textColor;
 		text-decoration: underline;
-		transition: all .3s ease;
+		transition: all 0.3s ease;
 		&:hover {
-			color: $mainColor
+			color: $mainColor;
 		}
 	}
 }
@@ -403,8 +421,13 @@ button.btn-default {
 @import "../common/testimonials/testimonials";
 @import "../common/verify-form/verify-form";
 @import "../common/cookies-message/cookies-message";
+@import "../common/hero/hero";
+@import "../common/values/values";
 // ==== BLOCKS ==
 
 // ==== PAGES =====================================================
 @import "pages/home";
+@import "pages/about";
+@import "pages/team";
+@import "pages/team-detail";
 // ==== AND PAGES =====================================================

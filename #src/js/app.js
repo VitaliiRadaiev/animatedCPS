@@ -37,6 +37,16 @@ window.addEventListener('load', function () {
 	@@include('../common/testimonials/testimonials.js');
 	@@include('../common/verify-form/verify-form.js');
 	@@include('../common/cookies-message/cookies-message.js');
+	@@include('../common/values/values.js');
+
+
+
+	let quoteTextAll = document.querySelectorAll('.team-photo__quote-text');
+	if(quoteTextAll) {
+		quoteTextAll.forEach(quoteText => {
+			trimString(quoteText, 121);
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function () {

@@ -444,31 +444,56 @@
     }
 }
 
-.training {
+.text-group {
+    &:not(.revers) {
+        & .text-group__item {
+            &:nth-child(even) {
+                & .text-img-block__img {
+                    @media (min-width: 1360px) {
+                        margin-right: max(20px, 8%);
+                    }
+
+                    @media (min-width: 992px) {
+                        float: left;
+                        margin-left: 0;
+                        margin-right: 30px;
+
+                        & img {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.revers {
+        & .text-group__item {
+            &:nth-child(odd) {
+                & .text-img-block__img {
+                    @media (min-width: 1360px) {
+                        margin-right: max(20px, 8%);
+                    }
+
+                    @media (min-width: 992px) {
+                        float: left;
+                        margin-left: 0;
+                        margin-right: 30px;
+
+                        & img {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
     &__item {
         margin-bottom: 72px;
 
         @media (max-width: $md3+px) {
             margin-bottom: 50px;
-        }
-
-        &:nth-child(even) {
-            & .text-img-block__img {
-                @media (min-width: 1360px) {
-                    margin-right: max(20px, 8%);
-                }
-
-                @media (min-width: 992px) {
-                    float: left;
-                    margin-left: 0;
-                    margin-right: 30px;
-
-                    & img {
-                        left: auto;
-                        right: 0;
-                    }
-                }
-            }
         }
     }
 }
@@ -539,7 +564,6 @@
                 object-fit: cover;
             }
         }
-
     }
 
     &__title {

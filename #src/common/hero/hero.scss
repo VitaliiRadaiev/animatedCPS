@@ -1,0 +1,50 @@
+.hero {
+    position: relative;
+    & .promo-header__bg-img {
+        &:before {
+            position: absolute;
+            content: '';
+            z-index: 2;
+            background-color: rgba($mainColor2, 0.2);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    & .promo-header__line.bottom-line {
+        @media (max-width: $md3+px) {
+            bottom: -5px;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        min-height: 803px;
+        padding-top: max(160px, 8%);
+        padding-bottom: max(160px, 8%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            min-height: 703px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: 503px;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+        }
+    }
+}

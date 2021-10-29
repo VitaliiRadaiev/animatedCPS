@@ -1,0 +1,44 @@
+.team-deatil-page{
+    & .hero__title {
+        max-width: 6.4em;
+    }
+}
+
+
+.team-deatil {
+    margin-bottom: 100px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+
+    & .text-content {
+        line-height: 167%;
+    }
+    & .team-photo {
+
+
+        @media (min-width: 992px) {
+            float: left;
+            margin-bottom: 91px;
+            margin-top: 13px;
+            margin-right: 18px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin: 0 auto 40px;
+        }
+    }
+
+    & p {
+        @media (min-width: 1268px) {
+            padding-right: 87px;
+        }
+    }
+
+    & .team-list__item-position {
+        @media (min-width: 992px) {
+            margin-bottom: 65px;
+        }
+    }
+}

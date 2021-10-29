@@ -1,0 +1,212 @@
+.team-page {
+    & .hero__title {
+        max-width: 6.4em;
+    }
+}
+
+.team-list {
+    @media (min-width: 992px) {
+        padding-top: 13px;
+    }
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 77px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        @media (min-width: 992px) {
+            display: flex;
+        }
+    }
+
+    &__item-col-1 {
+        flex: 0 0 447px;
+
+        @media (min-width: 992px) {
+            padding-top: 19px;
+            padding-left: 15px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 40px;
+
+            & .team-photo {
+                margin:  0 auto;
+            }
+        }
+    }
+
+    &__item-col-2 {
+        flex: 1 1 auto;
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+        }
+    }
+
+    &__item-name {
+        font-weight: bold;
+        color: $titleColor2;
+        margin-bottom: 11px;
+
+        @media (max-width: $md4+px) {
+            
+        }
+    }
+
+    &__item-position {
+        font-size: 24px;
+        line-height: 1.208em;
+        color: $mainColor2;
+        margin-bottom: 75px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item-text {
+        
+        @media (min-width: 992px) {
+            max-width: 582px;
+
+        }
+    }
+}
+
+.team-photo {
+    position: relative;
+    max-width: 416px;
+    width: 100%;
+    display: block;
+
+    @media (max-width: $md3+px) {
+        max-width: 340px;
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .team-photo__photo {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 110%;
+        height: 110%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+
+        & img,
+        & svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__body {
+        transform: translateY(15px) translateX(-4px);
+        position: relative;
+        z-index: 2;
+        -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzU3IiBoZWlnaHQ9IjM3OCIgdmlld0JveD0iMCAwIDM1NyAzNzgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05LjA3MjIzIDM2LjcwNzJDNDcuNzA5NCAtMTUuNTI4OCAyNDAuMzcyIC0xNy4xMjU1IDMzMS43NzYgNzMuMjM0MUM0MDQuNTY0IDE0NS4xOSAzMDMuNjc5IDMwMS4zIDIxOC45MzkgMzU0LjA3MUMyMy4yNDI5IDQ3NS45MzggLTIwLjQxODUgNzYuNTc3NiA5LjA3MjIzIDM2LjcwNzJaIiBmaWxsPSIjQzRDNEM0Ii8+Cjwvc3ZnPgo=");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center bottom;
+        mask-position: center;
+        -webkit-mask-size: 86%;
+        mask-size: 86%;
+        background-color: $mainColor;
+    }
+
+    &__photo {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 90%;
+        height: 99%;
+        z-index: 2;
+        transform: translateX(-50%);
+        transition: all 0.3s ease;
+        opacity: 1;
+    }
+
+    &__quote {
+        max-width: 382px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 193.4%;
+        color: $titleColor2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 393px;
+
+        @media (min-width: 768px) {
+            padding: 70px 50px 90px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: 315px;
+        }
+
+        & > div {
+            width: 100%;
+            max-width: 252px;
+            transform: translateX(-8px);
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 50px;
+            width: 50px;
+            left: 6%;
+            top: 52px;
+            background-image: url("../img/icons/quote-top.svg");
+            z-index: 1;
+            display: block;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            height: 50px;
+            width: 50px;
+            right: 26%;
+            bottom: 60px;
+            background-image: url("../img/icons/quote-bottom.svg");
+            z-index: 1;
+            display: block;
+        }
+    }
+
+    &__quote-text {
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+}
