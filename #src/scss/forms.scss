@@ -33,6 +33,14 @@
 //<SELECT (sel+tab)>====================================================================================================
 .select {
 	position: relative;
+	&._active {
+		& .select__title {
+			background: #eff1f1;
+			border: 1px solid #aac9af;
+			border-radius: 17px 17px 0px 0px;
+			border-bottom: none;
+		}
+	}
 	&__item {
 		position: relative;
 	}
@@ -44,6 +52,7 @@
 		padding: 10px 28px 10px 16px;
 		min-height: 60px;
 		cursor: pointer;
+		transition: all .3s ease;
 	}
 	// .select__value
 	&__value {
@@ -54,7 +63,7 @@
 			font-family: $mainFontFamily;
 		}
 		&:before {
-			font-family: 'icomoon';
+			font-family: "icomoon";
 			position: absolute;
 			content: "\e904";
 			top: 50%;
@@ -73,23 +82,32 @@
 		display: none;
 		position: absolute;
 		top: 100%;
-		border-radius: 17px;
+		border-radius: 0px 0px 17px 17px;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
-		padding: 10px 0px 10px 0px;
-		box-shadow: 12px 4px 31px rgba(0, 0, 0, 0.25);
+		background-color: #eff1f1;
+		border: 1px solid $mainColor;
+		padding: 21px 8px 16px;
 		max-height: 315px;
 		overflow-y: auto;
 	}
 	// .select__option
 	&__option {
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 5px 12px;
 		margin: 0px 0px 0px 0px;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		min-height: 39px;
+		transition: all 0.3s ease;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 		@media (min-width: 992px) {
 			&:hover {
-				background: rgba($mainColor, 0.3);
+				background: rgba(170, 201, 175, 0.7);
 			}
 		}
 	}

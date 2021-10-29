@@ -909,6 +909,170 @@ if(priceSlider) {
     }
 };
 	;
+	{
+    let teamSlider = document.querySelector('.team__slider');
+    if(teamSlider) {
+        let sliderData = new Swiper(teamSlider.querySelector('.swiper-container'), {
+            
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            
+            speed: 800,
+            loop: true,
+            pagination: {
+            	el: teamSlider.querySelector('.swiper-pagination'),
+            	clickable: true,
+            },
+            navigation: {
+                nextEl: teamSlider.querySelector('.partners__slider-btn-next'),
+                prevEl: teamSlider.querySelector('.partners__slider-btn-prev'),
+            },
+            
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1268: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+            on: {
+                afterInit: function() {
+                    let teamCardAll = document.querySelectorAll('.team-card');
+                    if(teamCardAll.length) {
+                        teamCardAll.forEach(card => {
+                            let title = card.querySelector('.team-card__title');
+                            let bottomLine = card.querySelector('.team-card__bottom');
+                            let padding = 28;
+
+                            const setPadding = () => {
+                                if(document.documentElement.clientWidth < 576) {
+                                    padding = 8;
+                                }
+                            }
+
+                            const setBottomHeight = () => {
+                                bottomLine.style.height = title.clientHeight + padding + 'px';
+                            }
+
+                            const setPositionTitle = () => {
+                                let bottomLength = card.clientHeight - title.clientHeight - title.offsetTop - (padding / 2);
+                                title.style.transform = `translateY(${bottomLength}px)`;
+                            }
+
+                            setPadding();
+                            setBottomHeight();
+                            setPositionTitle();
+
+                            window.addEventListener('resize', () => {
+                                setPadding();
+                                setBottomHeight();
+                                setPositionTitle();
+                            })
+                        })
+                    }
+                }
+            }
+        });
+    }
+};
+	{
+    let testimonialsSlider = document.querySelector('.testimonials__slider');
+    if(testimonialsSlider) {
+        let sliderData = new Swiper(testimonialsSlider.querySelector('.swiper-container'), {
+            
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true,
+            speed: 800,
+
+            //loop: true,
+            pagination: {
+            	el: testimonialsSlider.querySelector('.swiper-pagination'),
+            	clickable: true,
+            },
+            navigation: {
+                nextEl: testimonialsSlider.querySelector('.testimonials__slider-btn-next'),
+                prevEl: testimonialsSlider.querySelector('.testimonials__slider-btn-prev'),
+            },
+        });
+        
+    }
+};
+	{
+    let verifyCardSlider = document.querySelector('.verify-card__slider');
+    if(verifyCardSlider) {
+        let sliderData = new Swiper(verifyCardSlider.querySelector('.swiper-container'), {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 800,
+            loop: true,
+            navigation: {
+                nextEl: verifyCardSlider.querySelector('.partners__slider-btn-next'),
+                prevEl: verifyCardSlider.querySelector('.partners__slider-btn-prev'),
+            },
+        });
+        
+    }
+
+    let verifyFormItems = document.querySelector('.verify-form__items');
+    let verifyFormCard = document.querySelector('.verify-form__card');
+    if(verifyFormItems && verifyFormCard) {
+        const setFromCardPosition = () => {
+            verifyFormCard.style.top = verifyFormItems.offsetTop + 14 + 'px';
+        }
+
+        setFromCardPosition();
+
+        window.addEventListener('resize', setFromCardPosition);
+    }
+};
+	function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+
+const $cookieEl = document.getElementById('cookieMessage');
+if ($cookieEl) {
+    let closeBtn = document.querySelector('.cookies-message__agree');
+
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        $cookieEl.classList.remove('show');
+
+        document.cookie = encodeURIComponent('hide-cookie') + "=" + encodeURIComponent('true') + "; path=/; max-age=86400";
+    })
+
+
+    if (!getCookie('hide-cookie')) {
+        setTimeout(() => {
+            $cookieEl.classList.add('show');
+        }, 1000);
+    }
+
+};
 });
 
 window.addEventListener('DOMContentLoaded', function () {

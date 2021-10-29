@@ -193,6 +193,10 @@
         padding-bottom: 8px;
     }
 
+    & ._decor__wrap {
+        top: 340px;
+    }
+
     &__bg {
         position: absolute;
         top: 0;
@@ -436,6 +440,113 @@
         @media (max-width: 575.98px) {
             font-size: 14px;
             line-height: 17px;
+        }
+    }
+}
+
+.training {
+    &__item {
+        margin-bottom: 72px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+
+        &:nth-child(even) {
+            & .text-img-block__img {
+                @media (min-width: 1360px) {
+                    margin-right: max(20px, 8%);
+                }
+
+                @media (min-width: 992px) {
+                    float: left;
+                    margin-left: 0;
+                    margin-right: 30px;
+
+                    & img {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text-img-block {
+    &__body {
+    }
+
+    &__row-1 {
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        @media (max-width: $md2+px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        @media (max-width: 1359.98px) {
+            margin-left: 30px;
+        }
+
+        @media (max-width: $md1+px) {
+            width: 24%;
+        }
+
+        @media (min-width: 992px) {
+            height: 357px;
+            width: 43%;
+            margin-top: 19px;
+            margin-left: max(20px, 8%);
+            margin-bottom: 25px;
+
+            &.float {
+                float: right;
+            }
+
+            & img {
+                position: absolute;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 47vw;
+                min-width: 605px;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            order: 1;
+            height: 0;
+            padding-bottom: max(138px, 41.19%);
+            margin-left: 0;
+            width: 100%;
+
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 21px;
         }
     }
 }

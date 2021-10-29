@@ -281,6 +281,7 @@
     width: 100%;
     z-index: 48;
     background-color: $mainColor2;
+    box-shadow: 0 0 20px rgba(#fff, 0.2);
 
     @media (min-width: 992px) {
         display: none;

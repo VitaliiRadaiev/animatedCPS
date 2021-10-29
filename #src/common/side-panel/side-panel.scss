@@ -27,6 +27,7 @@
         line-height: 1.2em;
         cursor: pointer;
         transition: all .3s ease;
+        box-shadow: 0 0 20px rgba(#fff, 0.2);
 
         @media (min-width: 992px) {
             &:hover {

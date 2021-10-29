@@ -1,0 +1,175 @@
+.testimonials {
+    margin-bottom: 100px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+
+    &__body {
+        max-width: 1160px;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__slider {
+        width: 100%;
+        max-width: 736px;
+        min-height: 633px;
+        margin: 0 auto;
+        position: relative;
+        padding: 29px 80px 40px;
+
+        @media (min-width: 992px) {
+            transform: translateX(11%);
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 40px 20px;
+            max-width: 354px;
+            min-height: 342px;
+        }
+    }
+
+    &__slider-bg {
+        position: absolute;
+        top: 0;
+        left: 2%;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img,
+        & svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    & .swiper-container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 552px;
+        min-height: 570px;
+        padding-bottom: 60px;
+        background-image: url("../img/photo/bg-sepia.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 29px;
+        backdrop-filter: blur(25px);
+        border: 1px solid #fff;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        @media (max-width: $md3+px) {
+            min-height: 304px;
+            max-width: 295px;
+            padding-bottom: 32px;
+        }
+
+        & .swiper-slide {
+            padding: 37px 20px 35px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 1.208em;
+
+            @media (max-width: $md3+px) {
+                font-size: 14px;
+                line-height: 17px;
+
+                padding: 19px 15px 20px;
+            }
+        }
+    }
+
+    &__slider-photo {
+        margin: 0 auto 30px;
+        height: 130px;
+        width: 136px;
+        -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM2IiBoZWlnaHQ9IjEzMCIgdmlld0JveD0iMCAwIDEzNiAxMzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMzAuNjQgMTIwLjU2NkMxMTQuMTY3IDEzNy4zODMgNDAuMDgwMiAxMzIuNTkgNy43NjU0NyA5OS4xMTIzQy0xNy45Njc2IDcyLjQ1MzQgMjUuNjU2OCAyMS43OSA1OS44NjMgNi4wNjc0OEMxMzguODU3IC0zMC4yNDExIDE0My4yMTMgMTA3LjczIDEzMC42NCAxMjAuNTY2WiIgZmlsbD0iI0M0QzRDNCIvPgo8L3N2Zz4K");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+
+        @media (max-width: $md3+px) {
+            height: 72px;
+            width: 69px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__slider-text {
+        margin: 0 auto 34px;
+        max-width: 305px;
+        width: 100%;
+        font-weight: 600;
+        color: $titleColor2;
+
+        & > a {
+            display: block;
+            text-align: center;
+            color: $titleColor2;
+            font-weight: 700;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $mainColor;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            max-width: 188px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__slider-name {
+        color: #000000;
+        margin-bottom: 5px;
+    }
+
+    &__slider-position {
+        color: #c4c4c4;
+    }
+
+    &__slider-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 0;
+        bottom: 32px;
+        width: 100%;
+        position: absolute;
+
+        @media (max-width: $md3+px) {
+            bottom: 19px;
+        }
+    }
+
+    &__slider-btn {
+        color: #c4c4c4;
+        font-size: 24px;
+        cursor: pointer;
+
+        @media (max-width: $md3+px) {
+            font-size: 14px;
+            transform: translateY(2px);
+        }
+    }
+
+    &__slider-btn-prev {
+    }
+
+    &__slider-btn-next {
+    }
+}

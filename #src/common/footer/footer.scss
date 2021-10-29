@@ -1,0 +1,229 @@
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (min-width: 768px) {
+        background-color: $mainColor2;
+        padding-top: 57px;
+        padding-bottom: 100px;    
+    }
+
+    &__body {
+
+        text-align: center;
+
+        @media (max-width: $md2+px) {
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__col {
+        flex: 1 1 auto;
+
+        &:not(.footer__col-1) {
+
+
+            @media (max-width: $md1+px) {
+                flex: 0 1 33.333%;
+            }
+
+            @media (min-width: 768px) {
+                min-width: 220px;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    &__col-1 {
+        max-width: 181px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $md1+px) {
+            max-width: none;
+            flex: 0 1 100%;
+            justify-content: center;
+            margin-bottom: 56px;
+        }
+    }
+    &__col-2 {
+        @media (min-width: 1268px) {
+            max-width: 280px;
+        }
+    }
+    &__col-3 {
+        @media (min-width: 1268px) {
+            max-width: 321px;
+        }
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__col-4 {
+        @media (min-width: 1268px) {
+            max-width: 360px;
+            transform: translateX(30px);
+        }
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__logo-desk {
+        width: 100%;
+        max-width: 159px;
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__logo-mob {
+        width: 100%;
+        max-width: 110px;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__titel {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: $mainColor;
+        text-align: center;
+        margin-bottom: 45px;
+        text-transform: uppercase;
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__text-group {
+        @media (max-width: $md3+px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -10px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 23px;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+
+        @media (max-width: $md3+px) {
+            color: $titleColor2;
+            flex: 0 1 50%;
+            padding: 0 10px;
+        }
+
+        &.mail {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        & p {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            &.mail {
+                @media (max-width: $md3+px) {
+                    display: none;
+                }
+            }
+        }
+
+        & a {
+            color: #fff;
+            transition: all 0.3s ease;
+
+            @media (max-width: $md3+px) {
+                color: $titleColor2;
+            }
+
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__text-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $mainColor;
+        margin-bottom: 6px;
+    }
+
+    &__nav {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 30px;
+        & > li {
+            &:not(:last-child) {
+                margin-bottom: 11px;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        transition: all 0.3s ease;
+
+        &:before {
+            content: "\e906";
+            font-family: "icomoon";
+            font-size: 0.7em;
+            margin-right: 2px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+
+    &__time-group {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    &__time-item {
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        & h6 {
+            color: $mainColor;
+            margin-bottom: -3px;
+        }
+    }
+}

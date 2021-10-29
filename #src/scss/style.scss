@@ -292,6 +292,18 @@ textarea {
 			}
 		}
 	}
+
+	&.white {
+		color: #fff;
+		border-color: #fff;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background-color: #fff;
+				color: $mainColor;
+			}
+		}
+	}
 }
 
 button.btn-default {
@@ -303,7 +315,7 @@ button.btn-default {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	background: rgba(34, 60, 66, 0.07);
+	background: #eff1f1;
 	border-radius: 17px;
 	padding: 10px 19px;
 	font-size: 18px;
@@ -362,6 +374,15 @@ button.btn-default {
 
 	& figure {
 	}
+
+	& a {
+		color: $textColor;
+		text-decoration: underline;
+		transition: all .3s ease;
+		&:hover {
+			color: $mainColor
+		}
+	}
 }
 
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -378,6 +399,10 @@ button.btn-default {
 @import "../common/partners/partners";
 @import "../common/services/services";
 @import "../common/specializations/specializations";
+@import "../common/team/team";
+@import "../common/testimonials/testimonials";
+@import "../common/verify-form/verify-form";
+@import "../common/cookies-message/cookies-message";
 // ==== BLOCKS ==
 
 // ==== PAGES =====================================================
