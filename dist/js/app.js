@@ -189,7 +189,9 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
 
 function setSameHeight(items) {
 	if (!items.length) return;
-
+	Array.from(items).map(i => {
+		console.log(i.clientHeight);
+	} )
 	let maxHeight = Math.max(...Array.from(items).map(i => i.clientHeight));
 	items.forEach(i => i.style.minHeight = maxHeight + 'px');
 }
@@ -770,12 +772,14 @@ if(priceSlider) {
 	{
     let header = document.querySelector('.header');
     if (header) {
-        let menu = document.querySelector('.menu');
-        let btnMenuClose = document.querySelector('.menu__close');
+        let menu = document.querySelector('.main-menu .menu');
+        let btnMenuClose = menu.querySelector('.menu__close');
         let burger = burgerHandler();
+        let sideOpenMenuBtn = document.querySelector('.side-panel__item.open-menu-btn');
 
         const menuOpen = () => {
             menu.classList.add('open');
+            burger.open();
         }
         const menuClose = () => {
             menu.classList.remove('open');
@@ -791,34 +795,36 @@ if(priceSlider) {
         })
 
         btnMenuClose.addEventListener('click', menuClose);
+        sideOpenMenuBtn.addEventListener('click', menuOpen);
 
         window.addEventListener('scroll', () => {
             header.classList.toggle('is-scroll', window.pageYOffset > 50);
         })
 
 
-        let slideItems = header.querySelectorAll('.menu-item-has-children');
+        let slideItems = document.querySelectorAll('.main-menu .menu-item-has-children');
         if (slideItems.length) {
             slideItems.forEach(item => {
+                
                 let title = item.querySelector('.menu__link');
                 let subMenu = item.querySelector('.sub-menu');
 
                 title.addEventListener('click', (e) => {
-                    if (document.documentElement.clientWidth < 992) {
-                        e.preventDefault();
-                        title.classList.toggle('open');
-                        _slideToggle(subMenu);
 
-                        slideItems.forEach(i => {
-                            if (i === item) return;
+                    e.preventDefault();
+                    title.classList.toggle('open');
+                    _slideToggle(subMenu);
 
-                            let title = i.querySelector('.menu__link');
-                            let subMenu = i.querySelector('.sub-menu');
+                    slideItems.forEach(i => {
+                        if (i === item) return;
 
-                            title.classList.remove('open');
-                            _slideUp(subMenu);
-                        })
-                    }
+                        let title = i.querySelector('.menu__link');
+                        let subMenu = i.querySelector('.sub-menu');
+
+                        title.classList.remove('open');
+                        _slideUp(subMenu);
+                    })
+
                 })
             })
         }
@@ -914,7 +920,58 @@ if(priceSlider) {
         });
     }
 };
-	;
+	{
+    let servicesSlider = document.querySelector('.services__slider');
+    if(servicesSlider) {
+        let sliderData = new Swiper(servicesSlider.querySelector('.swiper-container'), {
+            
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            loop: true,
+            pagination: {
+            	el: servicesSlider.querySelector('.swiper-pagination'),
+            	clickable: true,
+            },
+            navigation: {
+                nextEl: servicesSlider.querySelector('.partners__slider-btn-next'),
+                prevEl: servicesSlider.querySelector('.partners__slider-btn-prev'),
+            },
+            watchSlidesVisibility: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1268: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
+            on: {
+                afterInit: function() {
+                    let cardTitleAll = servicesSlider.querySelectorAll('.services-card__title');
+                    if(cardTitleAll.length) {
+                        setSameHeight(cardTitleAll);
+                    }
+                }
+            }
+        });
+
+        let id = setInterval(() => {
+            sliderData.update();
+        }, 200)
+        setTimeout(() => {
+            clearInterval(id);
+        }, 1000)
+    }
+};
 	{
     let teamSlider = document.querySelector('.team__slider');
     if(teamSlider) {

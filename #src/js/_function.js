@@ -161,7 +161,9 @@ function createTabs(containerName = false, triggersName = false, tabsName = fals
 
 function setSameHeight(items) {
 	if (!items.length) return;
-
+	Array.from(items).map(i => {
+		console.log(i.clientHeight);
+	} )
 	let maxHeight = Math.max(...Array.from(items).map(i => i.clientHeight));
 	items.forEach(i => i.style.minHeight = maxHeight + 'px');
 }

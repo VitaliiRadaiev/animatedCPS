@@ -465,6 +465,7 @@
                     }
                 }
             }
+
         }
     }
     &.revers {
@@ -495,14 +496,31 @@
         @media (max-width: $md3+px) {
             margin-bottom: 50px;
         }
+
+        
+        & .text-img-block {
+            margin-bottom: 0;
+        }
+
+        & .text-img-block__row-1.text-content {
+            line-height: 1.24em;
+        }
     }
 }
 
 .text-img-block {
+    margin-bottom: 100px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
     &__body {
     }
 
     &__row-1 {
+        &.text-content {
+            line-height: 167%;
+        }
+
         &::after {
             content: "";
             display: block;

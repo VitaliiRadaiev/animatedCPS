@@ -37,6 +37,66 @@
             }
         }
     }
+
+    &__slider {
+        position: relative;
+
+        & .swiper-container {
+            margin: -30px -30px 0;
+            padding: 30px 30px 0;
+        }
+
+        & .swiper-wrapper {
+            margin-bottom: 42px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        & .swiper-slide {
+            height: auto;
+            opacity: 0;
+            transition: all .3s ease;
+
+            &.swiper-slide-visible {
+                opacity: 1;
+            }
+        }
+
+        & .partners__slider-btn {
+            z-index: 3;
+            color: $titleColor2;
+            font-size: 32px;
+            top: calc(50% - 30.5px);
+
+            @media (max-width: $md2+px) {
+                display: none;
+            }
+        }
+
+        & .partners__slider-btn-prev {
+            left: -20px;
+        }
+        & .partners__slider-btn-next {
+            right: -20px;
+        }
+
+        & .services-card {
+            @media (min-width: 992px) {
+                & .services-card__icon {
+                    margin-bottom: 28px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                & .services-card__title {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+    }
 }
 
 .services-card {
