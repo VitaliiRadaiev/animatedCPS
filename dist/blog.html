@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header">
+    <div class="container header__body">
+        <div class="header__logo">
+            <div class="header__logo-desk">
+                <a href="#">
+                    <img src="img/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header__logo-mob">
+                <a href="#">
+                    <img src="img/logo/logo-mob.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="header__menu menu">
+            <div class="menu__head">
+                <div class="menu__close">
+                    <img src="img/icons/close.svg" alt="">
+                </div>
+                <div class="menu__logo">
+                    <a href="#">
+                        <img src="img/logo/logo-mob-white.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="menu__scroll-wrap">
+
+                <ul class="menu__list">
+                    <li>
+                        <a href="#" class="menu__link current-menu-item">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">About</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="menu__link">Team</a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="menu__link ">Small Items</a></li>
+                            <li><a href="#" class="menu__link ">Medium Items</a></li>
+                            <li><a href="#" class="menu__link ">Large Items</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#" class="menu__link">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="menu__link">Small Items</a></li>
+                            <li><a href="#" class="menu__link">Medium Items</a></li>
+                            <li><a href="#" class="menu__link">Large Items</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-header">
+    <div class="mobile-header__body container">
+        <div class="mobile-header__item menu-switcher">
+            <div class="mobile-header__item-circle">
+                <div class="burger-wrap">
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header__item-title">Menu</div>
+        </div>
+        <a href="#" class="mobile-header__item">
+            <div class="mobile-header__item-circle">
+                <img src="img/icons/mob-menu-icon-1.svg" alt="">
+            </div>
+            <div class="mobile-header__item-title">Location</div>
+        </a>
+        <a href="#" class="mobile-header__item">
+            <div class="mobile-header__item-circle">
+                <img src="img/icons/mob-menu-icon-2.svg" alt="">
+            </div>
+            <div class="mobile-header__item-title">Insurance</div>
+        </a>
+        <a href="#" class="mobile-header__item">
+            <div class="mobile-header__item-circle">
+                <img src="img/icons/mob-menu-icon-3.svg" alt="">
+            </div>
+            <div class="mobile-header__item-title">Contact</div>
+        </a>
+    </div>
+</div>
+
+<div class="main-menu">
+    <div class="menu">
+        <div class="menu__head">
+            <div class="menu__close">
+                <img src="img/icons/close.svg" alt="">
+            </div>
+            <div class="menu__logo">
+                <a href="#">
+                    <img src="img/logo/logo-mob-white.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="menu__scroll-wrap">
+
+            <ul class="menu__list">
+                <li>
+                    <a href="#" class="menu__link current-menu-item">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">About</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" class="menu__link">Team</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="menu__link ">Small Items</a></li>
+                        <li><a href="#" class="menu__link ">Medium Items</a></li>
+                        <li><a href="#" class="menu__link ">Large Items</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" class="menu__link">Services</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="menu__link">Small Items</a></li>
+                        <li><a href="#" class="menu__link">Medium Items</a></li>
+                        <li><a href="#" class="menu__link">Large Items</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">Blog</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">Locations</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- == // TOP LINE ================== -->
+
+    <div class="side-panel">
+    <div class="side-panel__item open-menu-btn">
+        <img src="img/icons/side-panel-icon-1.svg" alt="">
+        <span>Menu</span>
+    </div>
+    <a href="#" class="side-panel__item">
+        <img src="img/icons/side-panel-icon-2.svg" alt="">
+        <span>Home</span>
+    </a>
+    <a href="#" class="side-panel__item">
+        <img src="img/icons/side-panel-icon-3.svg" alt="">
+        <span>Services</span>
+    </a>
+    <a href="#" class="side-panel__item">
+        <img src="img/icons/side-panel-icon-4.svg" alt="">
+        <span>Contact</span>
+    </a>
+    <a href="#" class="side-panel__item">
+        <img src="img/icons/side-panel-icon-5.svg" alt="">
+        <span>Team</span>
+    </a>
+</div>
+
+    <main class="_page blog-page">
+        <section class="hero">
+            <div class="promo-header__bg">
+                <div class="promo-header__line top-line">
+                    <img class="img-svg" src="img/photo/top-waves.svg" alt="">
+                </div>
+                <div class="promo-header__line bottom-line">
+                    <img class="img-svg" src="img/photo/bottom-waves.svg" alt="">
+                </div>
+                <div class="promo-header__bg-img ibg">
+                    <img src="img/photo/hero-bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="hero__body container">
+                <h1 class="hero__title title-1">
+                    blog
+                </h1>
+            </div>
+        </section>
+
+        <section class="text-block">
+            <div class="container">
+                <div class="text-block__row-1">
+                    <h2 class="text-block__title title-2 title-color text-xs-center">
+                        blog
+                    </h2>
+                    <div class="text-block__text text-content">
+                        California Psychological Services, Inc. is a comprehensive agency providing an impressive
+                        breadth of direct mental health services to a diverse range of clientele within the greater Los
+                        Angeles area. We provide individual, couples, family, and group therapy, as well as
+                        comprehensive psychological assessments, testing, and consultation services. The cornerstone of
+                        our practice constitutes empirically-based approaches, an acknowledgement of the fundamental
+                        mind-body connection, and strong ethics rooted in a social justice sensibility.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog">
+            <ul class="blog__list">
+                <li>
+                    <div class="text-img-block">
+                        <div class="text-img-block__body container">
+                            <div class="text-img-block__flex-wrap">
+                                <div class="text-img-block__col-1">
+                                    <div class="text-img-block__img">
+                                        <img src="img/photo/text-img-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-img-block__col-2">
+                                    <h3 class="text-img-block__title title-3 title-color">
+                                        <div class="team-photo small">
+                                            <div class="team-photo__bg ibg">
+                                                <img class="img-svg" src="img/photo/team-photo-bg-green.svg" alt="">
+                                            </div>
+                                            <div class="team-photo__body">
+                                                <div class="team-photo__photo ibg">
+                                                    <img src="img/photo/team-photo-1.jpg" alt="">
+                                                </div>
+                                                <div class="team-photo__quote"></div>
+                                            </div>
+                                        </div>
+                                        Lorem ipsum dolor sit amet
+                                    </h3>
+                                    <table class="text-img-block__meta">
+                                        <tr>
+                                            <td>Published: </td>
+                                            <td>August 20, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Updated: </td>
+                                            <td>August 21, 2021</td>
+                                        </tr>
+                                    </table>
+                                    <div class="text-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lacinia ipsum. Fusce diam dui, consequat et sagittis ac, dignissim vel velit. Maecenas malesuada scelerisque felis, ac cursus quam. Duis posuere quis metus sit amet tincidunt. Etiam et volutpat mauris. Proin consequat convallis ipsum. Nulla sit amet dolor imperdiet, posuere massa vitae, pulvinar ipsum. 
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn-default">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>         
+                <li>
+                    <div class="text-img-block">
+                        <div class="text-img-block__body container">
+                            <div class="text-img-block__flex-wrap">
+                                <div class="text-img-block__col-1">
+                                    <div class="text-img-block__img">
+                                        <img src="img/photo/text-img-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-img-block__col-2">
+                                    <h3 class="text-img-block__title title-3 title-color">
+                                        <div class="team-photo small">
+                                            <div class="team-photo__bg ibg">
+                                                <img class="img-svg" src="img/photo/team-photo-bg-green.svg" alt="">
+                                            </div>
+                                            <div class="team-photo__body">
+                                                <div class="team-photo__photo ibg">
+                                                    <img src="img/photo/team-photo-1.jpg" alt="">
+                                                </div>
+                                                <div class="team-photo__quote"></div>
+                                            </div>
+                                        </div>
+                                        Lorem ipsum dolor sit amet
+                                    </h3>
+                                    <table class="text-img-block__meta">
+                                        <tr>
+                                            <td>Published: </td>
+                                            <td>August 20, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Updated: </td>
+                                            <td>August 21, 2021</td>
+                                        </tr>
+                                    </table>
+                                    <div class="text-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lacinia ipsum. Fusce diam dui, consequat et sagittis ac, dignissim vel velit. Maecenas malesuada scelerisque felis, ac cursus quam. Duis posuere quis metus sit amet tincidunt. Etiam et volutpat mauris. Proin consequat convallis ipsum. Nulla sit amet dolor imperdiet, posuere massa vitae, pulvinar ipsum. 
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn-default">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="text-img-block">
+                        <div class="text-img-block__body container">
+                            <div class="text-img-block__flex-wrap">
+                                <div class="text-img-block__col-1">
+                                    <div class="text-img-block__img">
+                                        <img src="img/photo/text-img-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-img-block__col-2">
+                                    <h3 class="text-img-block__title title-3 title-color">
+                                        <div class="team-photo small">
+                                            <div class="team-photo__bg ibg">
+                                                <img class="img-svg" src="img/photo/team-photo-bg-green.svg" alt="">
+                                            </div>
+                                            <div class="team-photo__body">
+                                                <div class="team-photo__photo ibg">
+                                                    <img src="img/photo/team-photo-1.jpg" alt="">
+                                                </div>
+                                                <div class="team-photo__quote"></div>
+                                            </div>
+                                        </div>
+                                        Lorem ipsum dolor sit amet
+                                    </h3>
+                                    <table class="text-img-block__meta">
+                                        <tr>
+                                            <td>Published: </td>
+                                            <td>August 20, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Updated: </td>
+                                            <td>August 21, 2021</td>
+                                        </tr>
+                                    </table>
+                                    <div class="text-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lacinia ipsum. Fusce diam dui, consequat et sagittis ac, dignissim vel velit. Maecenas malesuada scelerisque felis, ac cursus quam. Duis posuere quis metus sit amet tincidunt. Etiam et volutpat mauris. Proin consequat convallis ipsum. Nulla sit amet dolor imperdiet, posuere massa vitae, pulvinar ipsum. 
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn-default">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="blog__bottom container">
+                
+<div class="pagging">
+	<!-- <a href="" class="pagging__arrow prev">Prev</a> -->
+	<ul class="pagging__list">
+		<li>
+			<a href="" class="pagging__item active">1</a>
+		</li>
+		<li>
+			<a href="" class="pagging__item">2</a>
+		</li>
+		<li>
+			<a href="" class="pagging__item">3</a>
+		</li>
+		<li>
+			<a href="" class="pagging__item">4</a>
+		</li>
+	</ul>
+	<a href="" class="pagging__arrow next">Next</a>
+</div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__col footer__col-1">
+                <div class="footer__logo">
+                    <div class="footer__logo-desk">
+                        <a href="#">
+                            <img src="img/logo/logo-white.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer__logo-mob">
+                        <a href="#">
+                            <img src="img/logo/logo-mob.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__col footer__col-2">
+                <div class="footer__titel">
+                    contact info
+                </div>
+                <div class="footer__text-group">
+                    <div class="footer__text">
+                        <div class="footer__text-title">
+                            Santa Clarita
+                        </div>
+                        <p><a href="tel:8185701804">(818)570-1804</a></p>
+                        <p>25050 Avenue Kearny, <br>
+                            Suite 203 <br>
+                            Valencia, CA 91355</p>
+                        <p class="mail"><a href="mailto:info@capsychservices.com">info@capsychservices.com</a></p>
+                    </div>
+
+                    <div class="footer__text">
+                        <div class="footer__text-title">
+                            Los Angeles
+                        </div>
+                        <p><a href="tel:3233252671">(323) 325-2671</a></p>
+                        <p>2894 Rowena Ave. <br>
+                            Los Angeles, CA 90039</p>
+                        <p class="mail"><a href="mailto:info@capsychservices.com">info@capsychservices.com</a></p>
+                    </div>
+
+                    <div class="footer__text mail">
+                        <div class="footer__text-title">
+                            Email
+                        </div>
+                        <p><a href="mailto:info@capsychservices.com">info@capsychservices.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__col footer__col-3">
+                <div class="footer__titel">
+                    quick links
+                </div>
+                <ul class="footer__nav">
+                    <li>
+                        <a href="#" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Location</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col-4">
+                <div class="footer__titel">
+                    hours of operation
+                </div>
+                <div class="footer__time-group">
+                    <div class="footer__time-item">
+                        <h6>Mondays-Fridays:</h6>
+                        <p>8:00am - 9:00pm</p>
+                    </div>
+                    <div class="footer__time-item">
+                        <h6>Saturdays:</h6>
+                        <p>8:00am - 9:00pm</p>
+                    </div>
+                    <div class="footer__time-item">
+                        <h6>Sundays:</h6>
+                        <p>8:00am - 9:00pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+
+    <div class="cookies-message" id="cookieMessage">
+    <div class="container cookies-message__body">
+        <div class="cookies-message__text">
+            This website uses cookies to provide better user experience 
+        </div>
+        <a href="#" class="cookies-message__agree">AGREE</a>
+        <a href="#" class="cookies-message__disagree">DISAGREE</a>
+    </div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

@@ -365,10 +365,39 @@ button.btn-default {
 	}
 
 	& h1 {
+		color: $mainColor;
 	}
 	& h2 {
+		font-weight: bold;
+		font-size: 64px;
+		line-height: 1.21875em;
+		margin-bottom: 0.4em;
+		color: $mainColor;
+
+		@media (max-width: $md3+px) {
+			font-size: 38px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 36px;
+		}
+		@media (max-width: 379.98px) {
+			font-size: 30px;
+		}
 	}
 	& h3 {
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 1.229em;
+		margin-bottom: 0.6em;
+		color: $mainColor;
+
+		@media (max-width: $md3+px) {
+			font-size: 34px;
+		}
+	
+		@media (max-width: $md4+px) {
+			font-size: 24px;
+		}
 	}
 	& h4 {
 	}
@@ -383,7 +412,12 @@ button.btn-default {
 	}
 
 	& ul {
+		margin-bottom: 1.6em;
+		margin-left: 1.666em;
 		& > li {
+			&:before {
+				content: '-';
+			}
 		}
 	}
 
@@ -391,6 +425,17 @@ button.btn-default {
 	}
 
 	& figure {
+		margin: 50px 0;
+
+		@media (max-width: $md3+px) {
+			margin: 30px 0;
+		}
+
+		& img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
 	}
 
 	& a {
@@ -423,6 +468,7 @@ button.btn-default {
 @import "../common/cookies-message/cookies-message";
 @import "../common/hero/hero";
 @import "../common/values/values";
+@import "../common/pagination/pagging";
 // ==== BLOCKS ==
 
 // ==== PAGES =====================================================
@@ -432,4 +478,7 @@ button.btn-default {
 @import "pages/team-detail";
 @import "pages/services";
 @import "pages/services-detail";
+@import "pages/specializations";
+@import "pages/blog";
+@import "pages/blog-detail";
 // ==== AND PAGES =====================================================

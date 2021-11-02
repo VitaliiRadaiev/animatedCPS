@@ -1,0 +1,40 @@
+.blog {
+    margin-bottom: 100px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        & > li {
+            margin-bottom: 100px;
+            @media (max-width: $md3+px) {
+                margin-bottom: 50px;
+            }
+
+            &:nth-child(even) {
+                @media (min-width: 992px) {
+                    & .text-img-block__flex-wrap {
+                        flex-direction: row-reverse;
+                    }
+
+                    & .text-img-block__col-1 {
+                        margin-right: 0;
+                        margin-left: max(20px, 8.4%);
+                    }
+
+                    & .text-img-block__img {
+                        & img {
+                            right: auto;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        
+    }
+}

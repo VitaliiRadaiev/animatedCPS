@@ -98,11 +98,25 @@
     }
 
     @media (min-width: 992px) {
-        &:hover {
+        &:hover:not(.small) {
             & .team-photo__photo {
                 opacity: 0;
             }
         }
+    }
+
+    &.small {
+       width: 46px; 
+
+       & .team-photo__quote {
+           min-height: auto;
+           height: 44px;
+           padding: 0;
+       }
+
+       & .team-photo__body {
+           transform: translate(0, 0);
+       }
     }
 
     &__bg {

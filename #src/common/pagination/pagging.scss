@@ -2,21 +2,73 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 50px;
 
     &__arrow {
         display: inline-flex;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: $titleColor2;
+        padding: 6px 12px;
+        transition: all .3s ease;
+        border-radius: 100px;
+
+        @media (min-width: 992px) {
+            &:hover:not(.active) {
+                background-color: rgba(34, 60, 66, 0.07);
+            }
+        }
+
+        &.prev {
+            &:before {
+                content: "\e905";
+                font-family: 'icomoon';
+                font-size: 0.7em;
+            }
+        }
+        &.next {
+            &:after {
+                content: "\e906";
+                font-family: 'icomoon';
+                font-size: 0.7em;
+            }
+        }
     }
 
     &__list {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 10px;
 
         & > li {
-            margin: 0 6px;
+            flex: 0 0 auto;
+            margin: 6px 7px;
         }
     }
 
     &__item {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: $mainColor;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        @media (min-width: 992px) {
+            &:hover:not(.active) {
+                background-color: rgba(34, 60, 66, 0.07);
+            }
+        }
+
+        &.active {
+            color: $titleColor2;
+        }
     }
 }

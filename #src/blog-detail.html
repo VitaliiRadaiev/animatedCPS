@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html')
+    <!-- == // TOP LINE ================== -->
+
+    @@include('common/side-panel/_side-panel.html')
+
+    <main class="_page blog-detail-page">
+        <section class="hero">
+            <div class="promo-header__bg">
+                <div class="promo-header__line top-line">
+                    <img class="img-svg" src="img/photo/top-waves.svg" alt="">
+                </div>
+                <div class="promo-header__line bottom-line">
+                    <img class="img-svg" src="img/photo/bottom-waves.svg" alt="">
+                </div>
+                <div class="promo-header__bg-img ibg">
+                    <img src="img/photo/hero-bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="hero__body container">
+                <h1 class="hero__title title-1">
+                    blog
+                </h1>
+            </div>
+        </section>
+
+        <section class="text-img-block">
+            <div class="text-img-block__body container">
+                <div class="text-img-block__row-1 mb-3 text-content">
+                    <div class="text-img-block__img float">
+                        <img src="img/photo/text-img-3.jpg" alt="">
+                    </div>
+                    <h3>
+                        Your Heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis massa congue, malesuada ex non, euismod quam. Morbi a purus sed eros dictum suscipit a a arcu. In porttitor augue vitae enim aliquam sagittis. Nunc porta nisi eu magna vulputate semper. Nam quis urna eu neque aliquam ultrices eget sit amet nibh. Fusce rhoncus, neque a aliquet mattis, eros erat posuere ipsum, at laoreet tortor quam eu justo. Vestibulum imperdiet dictum turpis vel convallis. Vestibulum laoreet at ipsum non commodo. Proin metus leo, dapibus at fringilla vel, feugiat in velit. Phasellus tempus urna quam, sed placerat ligula convallis eu. Suspendisse potenti. Pellentesque ac consectetur mi.
+                    </p>
+                    <p>
+                        Proin pellentesque non est at condimentum. Curabitur ut ante eget magna vulputate efficitur. Nulla suscipit ultricies luctus. Aliquam laoreet cursus pretium. Ut fringilla nulla urna, et dictum dolor posuere at. Sed sollicitudin sapien eu hendrerit tristique. Suspendisse accumsan massa id est ultricies, a gravida ipsum porta. Nulla facilisi. Quisque vitae iaculis sapien. Vivamus finibus nunc in tellus ullamcorper, sed elementum ipsum finibus. Nunc imperdiet nec nisl sed tincidunt. Maecenas id euismod sem. Duis imperdiet ligula id dui blandit pharetra. Fusce sed justo non dolor volutpat pharetra sit amet eget enim. Nunc vitae ipsum vitae risus ultrices convallis id vitae nulla. Sed quis interdum tellus.
+                    </p>
+                </div>
+                <div class="text-img-block__row-2">
+                    <div class="blog-detail-info">
+                        <table class="text-img-block__meta">
+                            <tr>
+                                <td>Published: </td>
+                                <td>August 20, 2021</td>
+                            </tr>
+                            <tr>
+                                <td>Updated: </td>
+                                <td>August 21, 2021</td>
+                            </tr>
+                        </table>
+                        <div class="blog-detail-info__group">
+                            <div class="author">
+                                <div class="author__img ibg">
+                                    <img src="img/photo/author.jpg" alt="">
+                                </div>
+                                <div class="author__text-wrap">
+                                    <div class="author__name">
+                                        Emma Stern
+                                    </div>
+                                    <div class="author__position">
+                                        psychologist
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="line"></span>
+                            <ul class="social">
+                                <li>
+                                    <a href="#">
+                                        <img class="img-svg" src="img/icons/reply.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-svg" src="img/icons/linkedin.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+
+    @@include('common/cookies-message/_cookies-message.html',{})
+
+
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

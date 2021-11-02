@@ -38,6 +38,7 @@ window.addEventListener('load', function () {
 	@@include('../common/verify-form/verify-form.js');
 	@@include('../common/cookies-message/cookies-message.js');
 	@@include('../common/values/values.js');
+	@@include('../common/specializations/specializations.js');
 
 
 
