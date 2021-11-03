@@ -224,7 +224,6 @@ textarea {
 	@media (max-width: $md4+px) {
 		font-size: 48px;
 	}
-	
 }
 .title-2 {
 	font-weight: bold;
@@ -258,6 +257,9 @@ textarea {
 }
 
 .title-4 {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.22em;
 }
 
 .title-5 {
@@ -394,12 +396,16 @@ button.btn-default {
 		@media (max-width: $md3+px) {
 			font-size: 34px;
 		}
-	
+
 		@media (max-width: $md4+px) {
 			font-size: 24px;
 		}
 	}
 	& h4 {
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 1.22em;
+		margin-bottom: 0.8em;
 	}
 
 	& h5 {
@@ -416,7 +422,7 @@ button.btn-default {
 		margin-left: 1.666em;
 		& > li {
 			&:before {
-				content: '-';
+				content: "-";
 			}
 		}
 	}
@@ -469,6 +475,7 @@ button.btn-default {
 @import "../common/hero/hero";
 @import "../common/values/values";
 @import "../common/pagination/pagging";
+@import "../common/locations/locations";
 // ==== BLOCKS ==
 
 // ==== PAGES =====================================================
@@ -481,4 +488,5 @@ button.btn-default {
 @import "pages/specializations";
 @import "pages/blog";
 @import "pages/blog-detail";
+@import "pages/locations";
 // ==== AND PAGES =====================================================

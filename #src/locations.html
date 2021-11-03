@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html')
+    <!-- == // TOP LINE ================== -->
+
+    @@include('common/side-panel/_side-panel.html')
+
+    <main class="_page locations-page">
+        <section class="hero">
+            <div class="promo-header__bg">
+                <div class="promo-header__line top-line">
+                    <img class="img-svg" src="img/photo/top-waves.svg" alt="">
+                </div>
+                <div class="promo-header__line bottom-line">
+                    <img class="img-svg" src="img/photo/bottom-waves.svg" alt="">
+                </div>
+                <div class="promo-header__bg-img ibg">
+                    <img src="img/photo/hero-bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="hero__body container">
+                <h1 class="hero__title title-1">
+                    locations
+                </h1>
+            </div>
+        </section>
+
+        <section class="locations">
+            <div class="container">
+                <h2 class="locations__title title-2 title-color text-xs-center">
+                    location
+                </h2>
+                <div class="locations__text text-content">Now offering telehealth to individuals seeking services in California</div>
+                <div class="locations__body">
+                    <div class="locations__tabs-nav">
+                        <div data-id="1" class="locations__tabs-nav-item ">
+                            <div class="locations__tabs-nav-item-title title-4">
+                                Los Angeles
+                            </div>
+                            <div class="locations__tabs-nav-item-text">
+                                <p>
+                                    999 North Ave # 999
+                                </p>
+                                <p>
+                                    California, CA  99999
+                                </p>
+                            </div>
+                        </div>
+                        <div data-id="2" class="locations__tabs-nav-item ">
+                            <div class="locations__tabs-nav-item-title title-4">
+                                Santa Clarita
+                            </div>
+                            <div class="locations__tabs-nav-item-text">
+                                <p>
+                                    25050 Avenue Kearny, Suite 203
+                                </p>
+                                <p>
+                                    Valencia, CA 91355
+                                </p>
+                            </div>
+                        </div>
+                        <div data-id="3" class="locations__tabs-nav-item active">
+                            <div class="locations__tabs-nav-item-title title-4">
+                                Los Angeles
+                            </div>
+                            <div class="locations__tabs-nav-item-text">
+                                <p>
+                                    999 North Ave # 999
+                                </p>
+                                <p>
+                                    California, CA  99999
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-id="1" class="locations__tab-content location ">
+                        <div class="location__col-1">
+                            <div class="map" id="map-1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847887.2595685214!2d-119.02903204256482!3d33.88811865382003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1635938176021!5m2!1sen!2sen" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="location__col-2">
+                            <h3 class="location__title title-3">Los Angeles</h3>
+                            <div class="location__text text-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lacinia ipsum. Fusce diam dui, consequat et sagittis ac, dignissim vel velit. 
+                            </div>
+                            <div class="location__bottom">
+                                <div class="location__bottom-item">
+                                    <div class="location__bottom-item-icon">
+                                        <img src="img/icons/location.svg" alt="">
+                                    </div>
+                                    <div class="location__bottom-item-text">
+                                        <p>
+                                            999 North Ave # 999
+                                        </p>
+                                        <p> 
+                                            California, CA  99999
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="location__bottom-item">
+                                    <div class="location__bottom-item-icon">
+                                        <img src="img/icons/phone2.svg" alt="">
+                                    </div>
+                                    <div class="location__bottom-item-text">
+                                        <p>
+                                            1-000-111-2222
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-id="2" class="locations__tab-content location">
+                        <div class="location__col-1">
+                            <div class="map" id="map-1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105334.3742659586!2d-118.56484230603488!3d34.40899084396517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c28633acd51827%3A0x564a8fe07305d648!2z0KHQsNC90YLQsC3QmtC70LDRgNC40YLQsCwg0JrQsNC70LjRhNC-0YDQvdC40Y8sINCh0KjQkA!5e0!3m2!1sru!2sua!4v1635938296547!5m2!1sen!2sen" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="location__col-2">
+                            <h3 class="location__title title-3">Santa Clarita</h3>
+                            <div class="location__text text-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lacinia ipsum. Fusce diam dui, consequat et sagittis ac, dignissim vel velit. 
+                            </div>
+                            <div class="location__bottom">
+                                <div class="location__bottom-item">
+                                    <div class="location__bottom-item-icon">
+                                        <img src="img/icons/location.svg" alt="">
+                                    </div>
+                                    <div class="location__bottom-item-text">
+                                        <p>
+                                            999 North Ave # 999
+                                        </p>
+                                        <p> 
+                                            California, CA  99999
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="location__bottom-item">
+                                    <div class="location__bottom-item-icon">
+                                        <img src="img/icons/phone2.svg" alt="">
+                                    </div>
+                                    <div class="location__bottom-item-text">
+                                        <p>
+                                            1-000-111-2222
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-id="3" class="locations__tab-content location">
+                        <div class="location__col-1">
+                            <div class="map" id="map-1">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847887.2595685214!2d-119.02903204256482!3d33.88811865382003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1635938176021!5m2!1sen!2sen" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="location__col-2">
+                            <h3 class="location__title title-3">Los Angeles</h3>
+                            <div class="location__text text-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec lacinia ipsum. Fusce diam dui, consequat et sagittis ac, dignissim vel velit. 
+                            </div>
+                            <div class="location__bottom">
+                                <div class="location__bottom-item">
+                                    <div class="location__bottom-item-icon">
+                                        <img src="img/icons/location.svg" alt="">
+                                    </div>
+                                    <div class="location__bottom-item-text">
+                                        <p>
+                                            999 North Ave # 999
+                                        </p>
+                                        <p> 
+                                            California, CA  99999
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="location__bottom-item">
+                                    <div class="location__bottom-item-icon">
+                                        <img src="img/icons/phone2.svg" alt="">
+                                    </div>
+                                    <div class="location__bottom-item-text">
+                                        <p>
+                                            1-000-111-2222
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+
+    @@include('common/cookies-message/_cookies-message.html',{})
+
+
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

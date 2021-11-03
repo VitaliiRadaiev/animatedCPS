@@ -39,6 +39,7 @@ window.addEventListener('load', function () {
 	@@include('../common/cookies-message/cookies-message.js');
 	@@include('../common/values/values.js');
 	@@include('../common/specializations/specializations.js');
+	@@include('../common/locations/locations.js');
 
 
 
