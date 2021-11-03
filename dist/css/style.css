@@ -2351,7 +2351,7 @@ textarea {
 
 .side-panel {
   position: fixed;
-  top: max(136px, 28vh);
+  top: max(136px, 18vh);
   left: 20px;
   display: none;
   -webkit-box-orient: vertical;
