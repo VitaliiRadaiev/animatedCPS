@@ -1,0 +1,26 @@
+.contact-page {
+    & .contact-us {
+        margin-bottom: 30px;
+    }
+}
+
+.full-width-map {
+    position: relative;
+    & .promo-header__bg {
+        z-index: 2;
+        pointer-events: none;
+    }
+    &__body {
+        height: 961px;
+        position: relative;
+        z-index: 1;
+        background-color: #c4c4c4;
+
+        @media (max-width: $md2+px) {
+            height: 600px;
+        }
+        @media (max-width: $md4+px) {
+            height: 500px;
+        }
+    }
+}

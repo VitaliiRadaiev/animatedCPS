@@ -356,6 +356,10 @@ button.btn-default {
 .link {
 }
 
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 18px;
@@ -489,4 +493,5 @@ button.btn-default {
 @import "pages/blog";
 @import "pages/blog-detail";
 @import "pages/locations";
+@import "pages/contact";
 // ==== AND PAGES =====================================================

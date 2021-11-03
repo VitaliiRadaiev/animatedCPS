@@ -1698,6 +1698,10 @@ textarea {
   color: #7D7987;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
 .text-content {
   font-size: 18px;
   line-height: 1.24em;
@@ -4591,6 +4595,26 @@ textarea {
   transition: all 0.3s ease;
 }
 
+.contact-page .contact-us {
+  margin-bottom: 30px;
+}
+
+.full-width-map {
+  position: relative;
+}
+
+.full-width-map .promo-header__bg {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.full-width-map__body {
+  height: 961px;
+  position: relative;
+  z-index: 1;
+  background-color: #c4c4c4;
+}
+
 @media (min-width: 576px) {
   .blog-detail-info__group {
     display: -webkit-box;
@@ -5417,6 +5441,10 @@ textarea {
   .specializations-page .hero__title.title-1 {
     font-size: 68px;
   }
+
+  .full-width-map__body {
+    height: 600px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -6124,6 +6152,10 @@ textarea {
 
   .specializations-page .hero__title.title-1 {
     font-size: 30px;
+  }
+
+  .full-width-map__body {
+    height: 500px;
   }
 }
 
