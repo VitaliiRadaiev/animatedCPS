@@ -6236,6 +6236,10 @@ textarea {
     font-size: 30px;
   }
 
+  .sub-social {
+    left: -10px;
+  }
+
   .full-width-map__body {
     height: 500px;
   }

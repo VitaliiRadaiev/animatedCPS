@@ -145,6 +145,10 @@
     top: 100%;
     left: -30px;
 
+    @media (max-width: $md4+px) {
+        left: -10px;
+    }
+
     padding: 10px 30px;
     background-color: rgb(243, 243, 243);
 
