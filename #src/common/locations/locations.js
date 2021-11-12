@@ -3,6 +3,7 @@
     if(locations) {
         let triggers = Array.from(document.querySelectorAll('.locations__tabs-nav-item'));
         let tabs = Array.from(document.querySelectorAll('.locations__tab-content'));
+        let idTab = document.location.hash.replace('#', '');
 
         const setActiveTab = (id) => {
             triggers.forEach(item => {
@@ -21,8 +22,12 @@
             })
         }
 
-        let activeEl = triggers.find(i => i.classList.contains('active'));
-        setActiveTab(activeEl.dataset.id);
+        if(idTab) {
+            setActiveTab(idTab);
+        } else {
+            let activeEl = triggers.find(i => i.classList.contains('active'));
+            setActiveTab(activeEl.dataset.id);
+        }
 
         triggers.forEach(item => {
             item.addEventListener('click', () => {

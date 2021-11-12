@@ -1259,6 +1259,7 @@ if ($cookieEl) {
     if(locations) {
         let triggers = Array.from(document.querySelectorAll('.locations__tabs-nav-item'));
         let tabs = Array.from(document.querySelectorAll('.locations__tab-content'));
+        let idTab = document.location.hash.replace('#', '');
 
         const setActiveTab = (id) => {
             triggers.forEach(item => {
@@ -1277,8 +1278,12 @@ if ($cookieEl) {
             })
         }
 
-        let activeEl = triggers.find(i => i.classList.contains('active'));
-        setActiveTab(activeEl.dataset.id);
+        if(idTab) {
+            setActiveTab(idTab);
+        } else {
+            let activeEl = triggers.find(i => i.classList.contains('active'));
+            setActiveTab(activeEl.dataset.id);
+        }
 
         triggers.forEach(item => {
             item.addEventListener('click', () => {
@@ -1294,6 +1299,13 @@ if ($cookieEl) {
 	if (quoteTextAll) {
 		quoteTextAll.forEach(quoteText => {
 			trimString(quoteText, 121);
+		})
+	}
+
+	let locationsSelect = document.querySelector('#locations');
+	if(locationsSelect) {
+		locationsSelect.addEventListener('change', (e) => {
+			window.location.href = window.location.origin + e.target.value;
 		})
 	}
 });

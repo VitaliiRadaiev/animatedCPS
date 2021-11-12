@@ -121,6 +121,10 @@
     }
 
     & .hover {
+        & > a {
+            pointer-events: none;
+        }
+
         &:hover {
             & .sub-social {
                 display: flex;
@@ -139,7 +143,7 @@
     position: absolute;
     display: none;
     top: 100%;
-    right: -10px;
+    left: -30px;
 
     padding: 10px 30px;
     background-color: rgb(243, 243, 243);

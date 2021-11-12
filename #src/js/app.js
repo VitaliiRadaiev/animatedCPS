@@ -49,6 +49,13 @@ window.addEventListener('load', function () {
 			trimString(quoteText, 121);
 		})
 	}
+
+	let locationsSelect = document.querySelector('#locations');
+	if(locationsSelect) {
+		locationsSelect.addEventListener('change', (e) => {
+			window.location.href = window.location.origin + e.target.value;
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function () {
