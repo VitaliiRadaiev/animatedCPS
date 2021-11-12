@@ -3182,6 +3182,7 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .testimonials__slider-text > a:hover {
@@ -4575,7 +4576,13 @@ textarea {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  margin: 10px 24px 10px 0;
+  margin: 0px 24px 0px 0;
+  padding: 10px 0;
+  position: relative;
+}
+
+.social > li:last-child {
+  margin-right: 0;
 }
 
 .social > li > a {
@@ -4590,6 +4597,73 @@ textarea {
 
 .social > li > a img path,
 .social > li > a svg path {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.social .more {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.social .more:before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #AAC9AF;
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.social .hover:hover .sub-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social .hover:hover .more:before {
+  border-top: 10px solid #223C42;
+}
+
+.sub-social {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: -10px;
+  padding: 10px 30px;
+  background-color: #f3f3f3;
+}
+
+.sub-social > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 10px 24px 10px 0;
+}
+
+.sub-social > li:last-child {
+  margin-right: 0;
+}
+
+.sub-social > li > a {
+  height: 27px;
+}
+
+.sub-social > li > a img,
+.sub-social > li > a svg {
+  height: 100%;
+  width: auto;
+}
+
+.sub-social > li > a img path,
+.sub-social > li > a svg path {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -5073,6 +5147,10 @@ textarea {
   }
 
   .social > li > a:hover svg path {
+    fill: #223C42;
+  }
+
+  .sub-social > li > a:hover svg path {
     fill: #223C42;
   }
 }

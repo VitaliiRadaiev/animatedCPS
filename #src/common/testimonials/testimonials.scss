@@ -120,6 +120,7 @@
             font-weight: 700;
             text-decoration: underline;
             transition: all 0.3s ease;
+            cursor: pointer;
 
             &:hover {
                 color: $mainColor;
